@@ -3,8 +3,8 @@ Building better online reviews to empower users
 
 
 **Authors:**
-[Brendan Davis](https://github.com/Tsarcastic)
-[Carson Newton](https://github.com/nosrac77)
+[Brendan Davis](https://github.com/Tsarcastic),
+[Carson Newton](https://github.com/nosrac77), and
 [Marco Zangari](https://github.com/marco-zangari)
 
 
