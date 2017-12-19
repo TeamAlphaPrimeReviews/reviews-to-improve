@@ -4,6 +4,7 @@
   become_method: sudo
 
   environment:
+      DEBUG: '{{ DEBUG }}'
       SECRET_KEY: '{{ SECRET_KEY }}'
       DATABASE_NAME: '{{ DATABASE_NAME }}'
       DATABASE_USER: '{{ DATABASE_USER }}'
