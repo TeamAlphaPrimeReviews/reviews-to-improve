@@ -24,7 +24,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', '')
 
-# ALLOWED_HOSTS = ['ec2-54-146-255-108.compute-1.amazonaws.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['ec2-54-146-255-108.compute-1.amazonaws.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -141,12 +141,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #
 # DEFAULT_FILE_STORAGE = 'imagersite.custom_storages.MediaStorage'
 
-# if DEBUG:
+if DEBUG:
 
-STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
+    STATIC_URL = '/static/'
+    MEDIA_URL = '/media/'
 
-# else:
-#
-#     STATIC_URL = 'https://{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
-#     MEDIA_URL = 'https://{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+else:
+
+    STATIC_URL = 'https://{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
+    MEDIA_URL = 'https://{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
