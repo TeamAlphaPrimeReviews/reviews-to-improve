@@ -21,5 +21,5 @@ for text in all_reviews:
     review_texts.append(review)
 
 for star in all_reviews:
-    number_stars = len(star.find(class_='staticStars').find_all(class_='p10'))
+    number_stars = len(all_reviews[star].find(class_='staticStars').find_all(class_='p10'))
     stars_text.append(star)
