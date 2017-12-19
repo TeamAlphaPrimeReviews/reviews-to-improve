@@ -1,3 +1,5 @@
+"""Format requests from GoodReads website with Beautiful Soup."""
+
 from bs4 import BeautifulSoup
 from datetime import datetime
 import requests
@@ -7,9 +9,6 @@ import pdb
 
 request = requests.get('https://www.goodreads.com/book/show/28259132-chaos-monkeys#other_reviews')
 
-#request.content is where it's at
-
-##page = urllib2.urlopen(request)
 soup = BeautifulSoup(request.content, 'html.parser')
 
 review_texts = []
