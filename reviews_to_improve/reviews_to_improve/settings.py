@@ -137,9 +137,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # AWS_STORAGE_BUCKET_NAME = 'djangoimagerresources'
 # AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
-STATICFILES_STORAGE = 'imagersite.custom_storages.StaticStorage'
-
-DEFAULT_FILE_STORAGE = 'imagersite.custom_storages.MediaStorage'
+# STATICFILES_STORAGE = 'imagersite.custom_storages.StaticStorage'
+#
+# DEFAULT_FILE_STORAGE = 'imagersite.custom_storages.MediaStorage'
 
 if DEBUG:
 
