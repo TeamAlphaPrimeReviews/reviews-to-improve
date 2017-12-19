@@ -7,22 +7,31 @@ import re
 import pdb
 
 
-request = requests.get('https://www.goodreads.com/book/show/28259132-chaos-monkeys#other_reviews')
+
+# def request_maker():
+#     """."""
+#     run for loop over the url
+#     add those to a list:
 
 
-def review_maker(request):
+def review_maker():
     """Parse request from GoodReads website with BS."""
-    soup = BeautifulSoup(request.content, 'html.parser')
-
     review_texts = []
     star_num_list = []
 
-    all_reviews = soup.find_all(class_="friendReviews")
+    for i in range(1, 949):
+        request = requests.get('https://www.rottentomatoes.com/m/star_wars_the_last_jedi/reviews/?page=%d&type=user&sort=' % i)
 
-    for text in all_reviews:
-        review = text.find_all('span', id=lambda val: val and val.startswith('freeTextContainer'))[0].string
-        review_texts.append(review)
+        soup = BeautifulSoup(request.content, 'html.parser')
 
-    for star in all_reviews:
-        num_stars = len(star.find(class_='staticStars').find_all(class_='p10'))
-        star_num_list.append(num_stars)
+        all_reviews = soup.find_all(class_="user_review")
+
+        for text in all_reviews:
+            # review = text.find_all('class_', id=lambda val: val and val.startswith('user_review'))
+            review = text.get_text()
+            review_texts.append(review)
+
+        for star in all_reviews:
+            num_stars = star.find(class_='scoreWrapper')
+            pdb.set_trace()
+            star_num_list.append(num_stars)
