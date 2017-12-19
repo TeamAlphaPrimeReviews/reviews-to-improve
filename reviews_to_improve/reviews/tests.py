@@ -16,3 +16,11 @@ class TestHomeView(TestCase):
         response = self.client.get('/')
 
         self.assertEqual(response.status_code, 200)
+
+    def test_home_view_renders_proper_template(self):
+        """Function that tests a response from a GET request to the home view
+        renders the correct template used to display the home-page."""
+
+        response = self.client.get('/')
+
+        self.assertTemplateUsed(response, 'index.html')
