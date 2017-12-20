@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'reviews',
-    # 'storages'
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -132,14 +132,14 @@ MEDIAFILES_LOCATION = 'media'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# AWS_ACCESS_KEY_ID = os.environ.get('IAM_USER_ACCESS_KEY_ID', '')
-# AWS_SECRET_ACCESS_KEY = os.environ.get('IAM_USER_SECRET_ACCESS_KEY', '')
-# AWS_STORAGE_BUCKET_NAME = 'djangoimagerresources'
-# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_ACCESS_KEY_ID = os.environ.get('IAM_USER_ACCESS_KEY_ID', '')
+AWS_SECRET_ACCESS_KEY = os.environ.get('IAM_USER_SECRET_ACCESS_KEY', '')
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME', '')
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
-# STATICFILES_STORAGE = 'imagersite.custom_storages.StaticStorage'
-#
-# DEFAULT_FILE_STORAGE = 'imagersite.custom_storages.MediaStorage'
+STATICFILES_STORAGE = 'reviews_to_improve.custom_storages.StaticStorage'
+
+DEFAULT_FILE_STORAGE = 'reviews_to_improve.custom_storages.MediaStorage'
 
 if DEBUG:
 

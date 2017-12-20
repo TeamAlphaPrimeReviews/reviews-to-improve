@@ -23,4 +23,31 @@ class TestHomeView(TestCase):
 
         response = self.client.get('/')
 
-        self.assertTemplateUsed(response, 'index.html')
+        self.assertTemplateUsed(response, 'reviews/startbootstrap-creative-gh-pages/index.html')
+
+    def test_home_view_response_contains_homepage_elements(self):
+        """Function that tests the page rendered contains the elements that the
+        home page should contain."""
+
+        response = self.client.get('/')
+
+        el = '<title>Creative - Start Bootstrap Theme</title>'
+        self.assertIn(el, str(response.content))
+
+    def test_home_view_static_files_being_loaded_correctly(self):
+        """Function that tests the home view being rendered is also rendering
+        the correct static files."""
+
+        response = self.client.get('/')
+
+        correct_el = '<link href="/static/reviews/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">'
+        self.assertIn(correct_el, str(response.content))
+
+    def test_home_view_static_files_do_not_contain_load_static(self):
+        """Function that tests the home view being rendered is also rendering
+        the correct static files."""
+
+        response = self.client.get('/')
+
+        incorrect_el = '<link href="{% static "reviews/vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">'
+        self.assertNotIn(incorrect_el, str(response.content))
