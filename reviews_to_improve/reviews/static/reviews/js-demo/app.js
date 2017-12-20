@@ -2,9 +2,9 @@ $(document).ready(function() {
   $('.progress').hide();
 });
 
-$('#load').on('click', function() {
+$('#load').click(function() {
   $('#load').fadeOut();
-  $('.progress').fadeIn();
+  $('.progress').delay(800).fadeIn();
 });
 
 // setTimeout(function() {
