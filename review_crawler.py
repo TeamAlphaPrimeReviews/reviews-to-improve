@@ -10,7 +10,7 @@ def review_maker():
     review_texts = []
     star_num_list = []
 
-    for i in range(1, 9):
+    for i in range(1, 50):
         request = requests.get('https://www.rottentomatoes.com/m/star_wars_the_last_jedi/reviews/?page=%d&type=user&sort=' % i)
         if request.status_code == 200:
 
