@@ -3,10 +3,10 @@ $(document).ready(function() {
 });
 
 $('#load').on('click', function() {
-  var $btn = $('#load');
-  $btn.hide();
-  $('.progress').show();
-  // setTimeout(function() {
-  //   $this.button('reset');
-  // }, 8000);
+  $('#load').fadeOut();
+  $('.progress').fadeIn();
 });
+
+// setTimeout(function() {
+//   $this.button('reset');
+// }, 8000);
