@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $('.progress').hide();
-  $('.alert alert-success').hide();
+  $('.alert').hide();
 });
 
 $('#load').click(function() {
