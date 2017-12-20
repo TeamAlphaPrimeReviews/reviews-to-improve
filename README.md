@@ -1,4 +1,4 @@
-# [ReviewsToImprove](https://github.com/TeamAlphaPrimeReviews)
+# [ReviewsImprove](https://github.com/TeamAlphaPrimeReviews)
 Building better online reviews to empower users
 
 
@@ -12,7 +12,7 @@ We build better online reviews to empower users. Online reviews are helpful exce
 
 ## App Navigation
 
-TBA
+Point your browser at:
 
 ## Future goals
 
@@ -20,4 +20,4 @@ TBA
 
 ## Contributing
 
-TBA
+If you want to contribute, fork the repo: (https://github.com/TeamAlphaPrimeReviews/reviews-to-improve).
