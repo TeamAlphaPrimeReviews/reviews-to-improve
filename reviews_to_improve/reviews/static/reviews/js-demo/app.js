@@ -8,5 +8,5 @@ $('#load').click(function() {
   $('#load').fadeOut();
   $('#blue-alert').delay(1000).fadeIn().delay(8000).fadeOut();
   $('.progress').delay(1000).fadeIn().delay(8000).fadeOut();
-  $('#green-alert').delay(8500).fadeIn();
+  $('#green-alert').delay(9500).fadeIn();
 });
