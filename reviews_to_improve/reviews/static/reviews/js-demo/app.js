@@ -2,11 +2,11 @@ $(document).ready(function() {
   $('.progress').hide();
 });
 
-$('.btn').on('click', function() {
-  var $this = $(this);
-  $this.hide();
+$('#load').on('click', function() {
+  var $btn = $('#load');
+  $btn.hide();
   $('.progress').show();
-  setTimeout(function() {
-    $this.button('reset');
-  }, 8000);
+  // setTimeout(function() {
+  //   $this.button('reset');
+  // }, 8000);
 });
