@@ -8,13 +8,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Full Width Pics - Start Bootstrap Template</title>
+    <title>Review Improve - About Us</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    {% load static %}
+    <link href="{% static "reviews/vendor-about/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/full-width-pics.css" rel="stylesheet">
+    {% load static %}
+    <link href="{% static "reviews/css-about/full-width-pics.css" %}" rel="stylesheet">
 
   </head>
 
@@ -86,8 +88,11 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    {% load static %}
+    <script src="{% static "reviews/vendor-about/jquery/jquery.min.js" %}"></script>
+    {% load static %}
+    <script src="{% static "reviews/vendor-about/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+
 
   </body>
 
