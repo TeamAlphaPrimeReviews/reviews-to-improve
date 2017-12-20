@@ -65,6 +65,8 @@
     - pip:
         virtualenv: /home/ubuntu/reviews_to_improve/ENV
         requirements: /home/ubuntu/reviews_to_improve/requirements.pip
+    - name: Collect static files
+      command: cd reviews_to_improve/reviews_to_improve && ./manage.py collectstatic
     - name: Start ReviewsToImprove app
       service:
         name=gunicorn
