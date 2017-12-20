@@ -17,6 +17,13 @@ class TestHomeView(TestCase):
 
         self.assertEqual(response.status_code, 200)
 
+    def test_home_view_response_is_not_404(self):
+        """Test a response from GET request is NOT 404 response."""
+
+        response = self.client.get('/')
+
+        self.assertNotEqual(response.status_code, 404)
+
     def test_home_view_renders_proper_template(self):
         """Function that tests a response from a GET request to the home view
         renders the correct template used to display the home-page."""
@@ -67,4 +74,3 @@ class TestHomeView(TestCase):
         el = 'About'
         self.assertInHTML(el, str(response))
 
-    def test_home_view_
