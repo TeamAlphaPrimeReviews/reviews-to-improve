@@ -66,8 +66,9 @@
         virtualenv: /home/ubuntu/reviews_to_improve/ENV
         requirements: /home/ubuntu/reviews_to_improve/requirements.pip
     - django_manage:
+        virtualenv: /home/ubuntu/reviews_to_improve/ENV
         command: collectstatic
-        app_path: "/home/ubuntu/reviews_to_improve/reviews_to_improve/"
+        app_path: /home/ubuntu/reviews_to_improve/reviews_to_improve/
     - name: Start ReviewsToImprove app
       service:
         name=gunicorn
