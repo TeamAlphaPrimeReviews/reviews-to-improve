@@ -60,9 +60,11 @@ class TestHomeView(TestCase):
         incorrect_el = '<link href="{% static "reviews/vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">'
         self.assertNotIn(incorrect_el, str(response.content))
 
-    def test_home_view_contains_about_a_tag(self):
-        """Test function has a tag with about text."""
+    def test_home_view_contains_word_about(self):
+        """Test function has a tag with about text to make sure still About link."""
 
         response = self.client.get('/').content
         el = 'About'
         self.assertInHTML(el, str(response))
+
+    def test_home_view_
