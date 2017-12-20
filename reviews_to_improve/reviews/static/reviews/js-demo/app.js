@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $('.progress').hide();
+  $('.alert alert-success').hide();
 });
 
 $('#load').click(function() {
