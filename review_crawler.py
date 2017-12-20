@@ -25,4 +25,5 @@ def review_maker():
             for star in all_reviews:
                 num_stars = star.find(class_='scoreWrapper').span['class'][0]
                 star_num_list.append(num_stars)
-    pdb.set_trace()
+        zipped_data = zip(review_texts, star_num_list)
+    return set(zipped_data)
