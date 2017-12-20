@@ -34,6 +34,14 @@ class TestHomeView(TestCase):
         el = '<title>Creative - Start Bootstrap Theme</title>'
         self.assertIn(el, str(response.content))
 
+    def test_home_view_response_converts_properly_to_bytes(self):
+        """Test the byte and unicode conversions in the get request."""
+
+        response = self.client.get('/')
+
+        el = b'<title>Creative - Start Bootstrap Theme</title>'
+        self.assertIn(el, response.content)
+
     def test_home_view_static_files_being_loaded_correctly(self):
         """Function that tests the home view being rendered is also rendering
         the correct static files."""
