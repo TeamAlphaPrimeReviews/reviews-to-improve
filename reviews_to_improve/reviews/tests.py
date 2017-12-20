@@ -32,6 +32,13 @@ class TestHomeView(TestCase):
 
         self.assertTemplateUsed(response, 'reviews/startbootstrap-creative-gh-pages/index.html')
 
+    def test_home_view_not_render_improper_template(self):
+        """Test GET request renders NOT the incorrect template."""
+
+        response = self.client.get('/')
+
+        self.assertTemplateNotUsed(response, 'reviews/startbootstrap-creative-gh-pages/home.html')
+
     def test_home_view_response_contains_homepage_elements(self):
         """Function that tests the page rendered contains the elements that the
         home page should contain."""
@@ -73,3 +80,5 @@ class TestHomeView(TestCase):
         response = self.client.get('/').content
         el = 'About'
         self.assertInHTML(el, str(response))
+
+    # def test_home_view_(self):
