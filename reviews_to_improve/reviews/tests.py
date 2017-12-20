@@ -40,7 +40,7 @@ class TestHomeView(TestCase):
 
         response = self.client.get('/')
 
-        correct_el = '<link href="/static/reviews/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">'
+        correct_el = '<link href="https://reviews-to-improve-s3.s3.amazonaws.com/static/reviews/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">'
         self.assertIn(correct_el, str(response.content))
 
     def test_home_view_static_files_do_not_contain_load_static(self):

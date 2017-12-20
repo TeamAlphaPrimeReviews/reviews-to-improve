@@ -19,5 +19,7 @@ from reviews import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.home_view, name='home')
+    url(r'^$', views.home_view, name='home'),
+    url(r'^about/$', views.about_view, name='about'),
+    url(r'^demo/$', views.demo_view, name='demo')
 ]
