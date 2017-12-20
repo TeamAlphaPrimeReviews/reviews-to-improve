@@ -75,10 +75,15 @@ class TestHomeView(TestCase):
         self.assertNotIn(incorrect_el, str(response.content))
 
     def test_home_view_contains_word_about(self):
-        """Test function has a tag with about text to make sure still About link."""
+        """Test home view has a tag with about text to make sure still About link."""
 
         response = self.client.get('/').content
         el = 'About'
         self.assertInHTML(el, str(response))
 
-    # def test_home_view_(self):
+    def test_home_view_contains_amazon_aws_s3(self):
+        """Test home_view contains the string amazon_aws_s3."""
+
+        response = self.client.get('/').content
+        el = '<script src="https://reviews-to-improve-s3.s3.amazonaws.com/static/reviews/js/creative.min.js"></script>'
+        self.assertIn(el, str(response))
