@@ -95,13 +95,13 @@ for item in data['Review']:
 # In[33]:
 
 
-print(vocab_list)
+print(len(vocab_list))
 
 
 # In[37]:
 
 
-vocab_list[0]
+print(vocab_list[0])
 
 
 # In[ ]:
@@ -112,8 +112,12 @@ vocab_list[0]
 
 # In[38]:
 
+"""
+In Jupyter notebook the fitting had to be done to vocab_list[0] but 
+it gives me an error in Python when I try to use it that way.
+"""
 
-vectorizer.fit(vocab_list[0])
+vectorizer.fit(vocab_list)
 
 
 # In[41]:
@@ -126,12 +130,12 @@ vectorizer.fit(vocab_list[0])
 
 
 print(vectorizer.vocabulary_)
-
-
+vector_export = vectorizer.vocabulary_
+print(len(vector_export))
 # In[44]:
 
 
-print(len(vectorizer.vocabulary_))
+#print(len(vectorizer.vocabulary_))
 
 
 # In[40]:
