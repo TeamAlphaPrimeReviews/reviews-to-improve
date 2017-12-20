@@ -73,4 +73,3 @@ class TestHomeView(TestCase):
         response = self.client.get('/').content
         el = 'About'
         self.assertInHTML(el, str(response))
-
