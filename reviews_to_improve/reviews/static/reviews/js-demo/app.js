@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 $('#load').click(function() {
   $('#load').fadeOut();
-  $('#blue-alert').delay(800).fadeIn().delay(8000).fadeOut();
-  $('.progress').delay(800).fadeIn().delay(8000).fadeOut();
-  $('#green-alert').fadeIn();
+  $('#blue-alert').delay(1000).fadeIn().delay(8000).fadeOut();
+  $('.progress').delay(1000).fadeIn().delay(8000).fadeOut();
+  $('#green-alert').delay(8500).fadeIn();
 });
