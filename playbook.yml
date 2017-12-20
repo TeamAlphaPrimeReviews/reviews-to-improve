@@ -10,6 +10,9 @@
       DATABASE_USER: '{{ DATABASE_USER }}'
       DATABASE_PASSWORD: '{{ DATABASE_PASSWORD }}'
       DATABASE_HOST: '{{ DATABASE_HOST }}'
+      AWS_ACCESS_KEY_ID: '{{ AWS_ACCESS_KEY_ID }}'
+      AWS_SECRET_ACCESS_KEY: '{{ AWS_SECRET_ACCESS_KEY }}'
+      AWS_STORAGE_BUCKET_NAME: '{{ AWS_STORAGE_BUCKET_NAME }}'
 
   tasks:
     - name: Update things on instance of ec2
@@ -30,7 +33,7 @@
         clone=yes
         repo=https://github.com/TeamAlphaPrimeReviews/reviews-to-improve.git
         dest=/home/ubuntu/reviews_to_improve/
-        version=features-website-djangoconfig
+        version=features-s3
     - name: Create venv
       command: python3 -m venv /home/ubuntu/reviews_to_improve/ENV
     - name: Install gunicorn to VENV
