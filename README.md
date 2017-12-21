@@ -35,6 +35,18 @@ Frontend web service with ready-to-use html and css:
 Favicon created with:
 [favicongenerator](https://www.favicongenerator.com/)
 
+#### Language & Data Processing
+
+The main language used:
+[Python3.6](https://www.python.org/downloads/)
+
+Scraped the web with:
+[Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/)
+
+Analyzed the data with:
+Used the natural language toolkit - [Nltk](http://www.nltk.org/data.html)
+And also the scikit for handling our classification models - [scikit-learn](http://scikit-learn.org/stable/)
+
 ## Future goals
 
 To add more categories beyond movies is a goal of ReviewImprove. We aim to be a clearing house for analyzing online reviews.
