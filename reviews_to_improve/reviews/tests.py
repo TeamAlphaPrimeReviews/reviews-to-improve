@@ -126,7 +126,7 @@ class TestAboutView(TestCase):
 
     def test_about_view_response_contains_aboutpage_elements(self):
         """Function that tests the page rendered contains the elements that the
-        home page should contain."""
+        about page should contain."""
 
         response = self.client.get('/about/')
 
@@ -134,22 +134,14 @@ class TestAboutView(TestCase):
 
         self.assertIn(el, str(response.content))
 
-    # def test_home_view_response_converts_properly_to_bytes(self):
-    #     """Test the byte and unicode conversions in the get request."""
+    def test_about_view_static_files_being_loaded_correctly(self):
+        """Function that tests the about view being rendered is also rendering
+        the correct static files."""
 
-    #     response = self.client.get('/')
+        response = self.client.get('/about/')
 
-    #     el = b'<title>Review Improve</title>'
-    #     self.assertIn(el, response.content)
-
-    # def test_home_view_static_files_being_loaded_correctly(self):
-    #     """Function that tests the home view being rendered is also rendering
-    #     the correct static files."""
-
-    #     response = self.client.get('/')
-
-    #     correct_el = '<link href="https://reviews-to-improve-s3.s3.amazonaws.com/static/reviews/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">'
-    #     self.assertIn(correct_el, str(response.content))
+        correct_el = '<link href="https://reviews-to-improve-s3.s3.amazonaws.com/static/reviews/vendor-about/bootstrap/css/bootstrap.min.css" rel="stylesheet">'
+        self.assertIn(correct_el, str(response.content))
 
     # def test_home_view_static_files_do_not_contain_load_static(self):
     #     """Function that tests the home view being rendered is also rendering
