@@ -124,14 +124,14 @@ class TestAboutView(TestCase):
 
         self.assertTemplateNotUsed(response, 'reviews/startbootstrap-full-width-pics-gh-pages/home.html')
 
-    # def test_home_view_response_contains_homepage_elements(self):
-    #     """Function that tests the page rendered contains the elements that the
-    #     home page should contain."""
+    def test_about_view_response_contains_aboutpage_elements(self):
+        """Function that tests the page rendered contains the elements that the
+        home page should contain."""
 
-    #     response = self.client.get('/')
+        response = self.client.get('/about/')
 
-    #     el = '<title>Review Improve</title>'
-    #     self.assertIn(el, str(response.content))
+        el = '<title>Review Improve</title>'
+        self.assertIn(el, str(response.content))
 
     # def test_home_view_response_converts_properly_to_bytes(self):
     #     """Test the byte and unicode conversions in the get request."""
