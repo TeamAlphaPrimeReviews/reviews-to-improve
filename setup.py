@@ -11,6 +11,6 @@ setup(
             'Allan Liebold',
             'Carson Newton',
             'Marco Zangari'],
-    author_email='paulrogers@gmail.com',
+    author_email='paulrogersjr@gmail.com',
     url='https://github.com/TeamAlphaPrimeReviews/reviews-to-improve'
 )
