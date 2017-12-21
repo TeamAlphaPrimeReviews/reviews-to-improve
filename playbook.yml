@@ -1,0 +1,77 @@
+---
+- hosts: us-west-2
+  become: yes
+  become_method: sudo
+
+  environment:
+      DEBUG: '{{ DEBUG }}'
+      SECRET_KEY: '{{ SECRET_KEY }}'
+      DATABASE_NAME: '{{ DATABASE_NAME }}'
+      DATABASE_USER: '{{ DATABASE_USER }}'
+      DATABASE_PASSWORD: '{{ DATABASE_PASSWORD }}'
+      DATABASE_HOST: '{{ DATABASE_HOST }}'
+      AWS_ACCESS_KEY_ID: '{{ AWS_ACCESS_KEY_ID }}'
+      AWS_SECRET_ACCESS_KEY: '{{ AWS_SECRET_ACCESS_KEY }}'
+      AWS_STORAGE_BUCKET_NAME: '{{ AWS_STORAGE_BUCKET_NAME }}'
+
+  tasks:
+    - name: Update things on instance of ec2
+      apt: update_cache=yes
+      become_method: sudo
+    - name: Install nginx, git, python3, python3-pip, python3.4-venv
+      apt: name={{ item }} state=latest
+      with_items:
+        - libpq-dev
+        - nginx
+        - git
+        - python3
+        - python3-pip
+        - python3.4-venv
+        - python-dev
+    - name: Clone things from git
+      git:
+        clone=yes
+        repo=https://github.com/TeamAlphaPrimeReviews/reviews-to-improve.git
+        dest=/home/ubuntu/reviews_to_improve/
+        version=features-site-pages
+    - name: Create venv
+      command: python3 -m venv /home/ubuntu/reviews_to_improve/ENV
+    - name: Install gunicorn to VENV
+      pip:
+        virtualenv=/home/ubuntu/reviews_to_improve/ENV
+        name={{ item }}
+      with_items:
+        - gunicorn
+    - name: Register old default
+      stat: path=/etc/nginx/sites-available/default.old
+      register: default_stat
+    - name: Rename old default file
+      command: mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default.pip
+      when: not default_stat.stat.exists
+    - name: Create new default file for nginx
+      template:
+        src=/home/nosrac/codefellows/401/reviews-to-improve/simple_nginx_config
+        dest=/etc/nginx/sites-available/default
+    - name: Restart the nginx service
+      service:
+        name=nginx
+        state=restarted
+      become: yes
+      become_method: sudo
+    - name: Copy upstart script into etc
+      template:
+        src=/home/nosrac/codefellows/401/reviews-to-improve/gunicorn.conf
+        dest=/etc/init/
+    - pip:
+        virtualenv: /home/ubuntu/reviews_to_improve/ENV
+        requirements: /home/ubuntu/reviews_to_improve/requirements.pip
+    - django_manage:
+        virtualenv: /home/ubuntu/reviews_to_improve/ENV
+        command: collectstatic
+        app_path: /home/ubuntu/reviews_to_improve/reviews_to_improve/
+    - name: Start ReviewsToImprove app
+      service:
+        name=gunicorn
+        state=restarted
+      become: yes
+      become_method: sudo
