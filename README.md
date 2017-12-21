@@ -23,8 +23,14 @@ Point your browser at the site: [ReviewImprove](http://ec2-54-146-255-108.comput
 [RDS PostGres](https://aws.amazon.com/rds/postgresql/)
 
 #### Other Services & Frameworks
+Automate updating your EC2 instance:
 [Ansible](https://www.ansible.com/integrations/cloud/amazon-web-services)
+
+A dynamic Python webframework to manage all your modules:
 [Django](https://www.djangoproject.com/)
+
+Frontend web service with ready-to-use html and css:
+[Bootstrap](https://startbootstrap.com/)
 
 ## Future goals
 
