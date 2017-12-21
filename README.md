@@ -12,11 +12,38 @@ We build better online reviews to empower users. Online reviews are helpful exce
 
 ## App Navigation
 
-Point your browser at:
+Point your browser at: (http://ec2-54-146-255-108.compute-1.amazonaws.com).
+
+
+## Resources Used
+
+#### AWS specific services:
+[Hosting on AWS EC2](https://aws.amazon.com/ec2/?hp=tile&so-exp=below)
+[Amazon Webservice - S3](https://aws.amazon.com/s3/?hp=tile&so-exp=below)
+[RDS PostGres](https://aws.amazon.com/rds/postgresql/)
+
+#### Other Services & Frameworks
+[Ansible](https://www.ansible.com/integrations/cloud/amazon-web-services)
+[Django](https://www.djangoproject.com/)
+
+## Testing
+
+To install pytest:
+```
+pip install pytest
+```
+To read more: [Pytest](https://docs.pytest.org/en/latest/)
+
+To install pytest coverage:
+```
+pip install pytest-cov
+```
+To read more: [Pytest-cov](https://pypi.python.org/pypi/pytest-cov)
+
 
 ## Future goals
 
-TBA
+To add more categories beyond movies.
 
 ## Contributing
 
