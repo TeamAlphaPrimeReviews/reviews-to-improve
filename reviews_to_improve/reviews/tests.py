@@ -45,7 +45,7 @@ class TestHomeView(TestCase):
 
         response = self.client.get('/')
 
-        el = '<title>Creative - Start Bootstrap Theme</title>'
+        el = '<title>Review Improve</title>'
         self.assertIn(el, str(response.content))
 
     def test_home_view_response_converts_properly_to_bytes(self):
@@ -53,7 +53,7 @@ class TestHomeView(TestCase):
 
         response = self.client.get('/')
 
-        el = b'<title>Creative - Start Bootstrap Theme</title>'
+        el = b'<title>Review Improve</title>'
         self.assertIn(el, response.content)
 
     def test_home_view_static_files_being_loaded_correctly(self):
@@ -88,6 +88,7 @@ class TestHomeView(TestCase):
         el = '<script src="https://reviews-to-improve-s3.s3.amazonaws.com/static/reviews/js/creative.min.js"></script>'
         self.assertIn(el, str(response))
 
+
 class TestAboutView(TestCase):
     """Class containing about_view tests."""
 
@@ -98,13 +99,13 @@ class TestAboutView(TestCase):
     def test_about_view_response_is_200_ok(self):
         """Test request to about view url returns 200 response."""
 
-        response = self.client.get('about/')
+        response = self.client.get('/about/')
 
         self.assertEqual(response.status_code, 200)
 
     def test_about_view_response_is_not_404(self):
         """Test request to about view url does NOT return 404."""
 
-        response = self.client.get('about/')
+        response = self.client.get('/about/')
 
         self.assertNotEqual(response.status_code, 404)
