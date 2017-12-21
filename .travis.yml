@@ -6,11 +6,11 @@ notifications:
   email: false
 
 install:
-  # - pip install tox-travis
+  - pip install pytest pytest-cov
   - pip install coveralls
 
 script:
-  # - tox
+  - py.test
 
 after_success:
   - coveralls
