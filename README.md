@@ -1,4 +1,4 @@
-# [ReviewImprove](http://ec2-54-146-255-108.compute-1.amazonaws.com)
+# [ReviewImprove](http://ec2-54-146-255-108.compute-1.amazonaws.com)[![Build Status](https://travis-ci.org/TeamAlphaPrimeReviews/reviews-to-improve.svg?branch=master)](https://travis-ci.org/TeamAlphaPrimeReviews/reviews-to-improve)
 Analyzing better online reviews to empower users
 
 
