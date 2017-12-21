@@ -95,4 +95,16 @@ class TestAboutView(TestCase):
         """Set up for client creation."""
         self.client = Client()
 
-    def
+    def test_about_view_response_is_200_ok(self):
+        """Test request to about view url returns 200 response."""
+
+        response = self.client.get('about/')
+
+        self.assertEqual(response.status_code, 200)
+
+    def test_about_view_response_is_not_404(self):
+        """Test request to about view url does NOT return 404."""
+
+        response = self.client.get('about/')
+
+        self.assertNotEqual(response.status_code, 404)
