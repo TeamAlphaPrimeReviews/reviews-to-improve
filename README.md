@@ -1,5 +1,5 @@
-# [ReviewsImprove](https://github.com/TeamAlphaPrimeReviews)
-Building better online reviews to empower users
+# [ReviewImprove](http://ec2-54-146-255-108.compute-1.amazonaws.com)
+Analyzing better online reviews to empower users
 
 
 **Authors:**
@@ -8,11 +8,11 @@ Building better online reviews to empower users
 [Marco Zangari](https://github.com/marco-zangari)
 
 
-We build better online reviews to empower users. Online reviews are helpful except when they are not. We aim to make sure that before you read a site's reviews you receive a comprehensive review-score to know whether you should spend your time at the site's reviews or not.
+We analyze online reviews to empower users. Online reviews are helpful except when they are not. We aim to make sure that before you read a site's reviews you receive a comprehensive review-score to know whether you should spend your time at the site's reviews or not.
 
 ## App Navigation
 
-Point your browser at: (http://ec2-54-146-255-108.compute-1.amazonaws.com).
+Point your browser at the site: [ReviewImprove](http://ec2-54-146-255-108.compute-1.amazonaws.com).
 
 
 ## Resources Used
@@ -26,25 +26,44 @@ Point your browser at: (http://ec2-54-146-255-108.compute-1.amazonaws.com).
 [Ansible](https://www.ansible.com/integrations/cloud/amazon-web-services)
 [Django](https://www.djangoproject.com/)
 
+## Future goals
+
+To add more categories beyond movies is a goal of ReviewImprove. We aim to be a clearing house for analyzing online reviews.
+
+## Contributing
+
+If you want to contribute, fork the repo: (https://github.com/TeamAlphaPrimeReviews/reviews-to-improve).
+
 ## Testing
 
-To install pytest:
+To set up a virtual environment for your testing suite, follow these instructions:
+```
+pip install virtualenv
+```
+
+Make a directory to do your testing work. You can name it whatever you want, but here we name it review-improve. Once you've made your directory, enter the new directory:
+```
+mkdir reviewimprove-environment && cd reviewimprove-environment
+```
+
+Make your virtual environment and create its file system by activating it:
+```
+pyvenv ENV && source ENV/bin/activate
+```
+
+Install pytest:
 ```
 pip install pytest
 ```
 To read more: [Pytest](https://docs.pytest.org/en/latest/)
 
-To install pytest coverage:
+Install pytest coverage:
 ```
 pip install pytest-cov
 ```
 To read more: [Pytest-cov](https://pypi.python.org/pypi/pytest-cov)
 
-
-## Future goals
-
-To add more categories beyond movies.
-
-## Contributing
-
-If you want to contribute, fork the repo: (https://github.com/TeamAlphaPrimeReviews/reviews-to-improve).
+You can deactivate your environment at any time by simply typing in your command line:
+```
+deactivate
+```
