@@ -130,7 +130,8 @@ class TestAboutView(TestCase):
 
         response = self.client.get('/about/')
 
-        el = '<title>Review Improve</title>'
+        el = '<title>Review Improve - About Us</title>'
+
         self.assertIn(el, str(response.content))
 
     # def test_home_view_response_converts_properly_to_bytes(self):
