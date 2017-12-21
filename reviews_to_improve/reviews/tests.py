@@ -88,6 +88,13 @@ class TestHomeView(TestCase):
         el = '<script src="https://reviews-to-improve-s3.s3.amazonaws.com/static/reviews/js/creative.min.js"></script>'
         self.assertIn(el, str(response))
 
+<<<<<<< HEAD
+    def test_about_view_contains_amazon_aws_s3(self):
+        response = self.client.get('').content
+        el = '<script src="https://reviews-to-improve-s3.s3.amazonaws.com/static/reviews/js/creative.min.js"></script>'
+        self.assertIn(el, str(response))
+
+=======
 
 class TestAboutView(TestCase):
     """Class containing about_view tests."""
@@ -165,3 +172,4 @@ class TestAboutView(TestCase):
     #     response = self.client.get('/').content
     #     el = '<script src="https://reviews-to-improve-s3.s3.amazonaws.com/static/reviews/js/creative.min.js"></script>'
     #     self.assertIn(el, str(response))
+>>>>>>> 44458d644e243d5f2de735444e3a41fffb2a9ff3
