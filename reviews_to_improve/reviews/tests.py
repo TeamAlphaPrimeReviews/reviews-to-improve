@@ -87,3 +87,9 @@ class TestHomeView(TestCase):
         response = self.client.get('/').content
         el = '<script src="https://reviews-to-improve-s3.s3.amazonaws.com/static/reviews/js/creative.min.js"></script>'
         self.assertIn(el, str(response))
+
+    def test_about_view_contains_amazon_aws_s3(self):
+        response = self.client.get('').content
+        el = '<script src="https://reviews-to-improve-s3.s3.amazonaws.com/static/reviews/js/creative.min.js"></script>'
+        self.assertIn(el, str(response))
+

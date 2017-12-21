@@ -32,6 +32,9 @@ A dynamic Python webframework to manage all your modules:
 Frontend web service with ready-to-use html and css:
 [Bootstrap](https://startbootstrap.com/)
 
+Favicon created with:
+[favicongenerator](https://www.favicongenerator.com/)
+
 ## Future goals
 
 To add more categories beyond movies is a goal of ReviewImprove. We aim to be a clearing house for analyzing online reviews.
