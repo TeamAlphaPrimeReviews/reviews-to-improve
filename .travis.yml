@@ -1,4 +1,3 @@
-# this is a line
 language: python
 python:
   - "3.6"
