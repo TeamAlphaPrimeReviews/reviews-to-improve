@@ -1,4 +1,4 @@
-# [ReviewImprove](http://ec2-54-146-255-108.compute-1.amazonaws.com)[![Build Status](https://travis-ci.org/TeamAlphaPrimeReviews/reviews-to-improve.svg?branch=master)](https://travis-ci.org/TeamAlphaPrimeReviews/reviews-to-improve)
+# [![Build Status](https://travis-ci.org/TeamAlphaPrimeReviews/reviews-to-improve.svg?branch=master)](https://travis-ci.org/TeamAlphaPrimeReviews/reviews-to-improve)[ReviewImprove](http://ec2-54-146-255-108.compute-1.amazonaws.com)
 Analyzing better online reviews to empower users
 
 
@@ -45,19 +45,14 @@ If you want to contribute, fork the repo: (https://github.com/TeamAlphaPrimeRevi
 
 ## Testing
 
-To set up a virtual environment for your testing suite, follow these instructions:
-```
-pip install virtualenv
-```
-
 Make a directory to do your testing work. You can name it whatever you want, but here we name it review-improve. Once you've made your directory, enter the new directory:
 ```
 mkdir reviewimprove-environment && cd reviewimprove-environment
 ```
 
-Make your virtual environment and create its file system by activating it:
+Make your virtual environment for your testing suite and create its file system by activating it:
 ```
-pyvenv ENV && source ENV/bin/activate
+python -m venv ENV && source ENV/bin/activate
 ```
 
 Install pytest:
