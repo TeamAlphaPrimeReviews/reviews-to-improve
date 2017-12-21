@@ -87,3 +87,12 @@ class TestHomeView(TestCase):
         response = self.client.get('/').content
         el = '<script src="https://reviews-to-improve-s3.s3.amazonaws.com/static/reviews/js/creative.min.js"></script>'
         self.assertIn(el, str(response))
+
+class TestAboutView(TestCase):
+    """Class containing about_view tests."""
+
+    def setUp(self):
+        """Set up for client creation."""
+        self.client = Client()
+
+    def
