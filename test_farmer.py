@@ -1,6 +1,7 @@
 """To demonstrate tests of Jupyter notebook material."""
 
 import pytest
+import nltk
 from farmer import vocab_list
 from farmer import vector_export    
 
