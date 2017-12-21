@@ -117,12 +117,12 @@ class TestAboutView(TestCase):
 
         self.assertTemplateUsed(response, 'reviews/startbootstrap-full-width-pics-gh-pages/about.html')
 
-    # def test_about_view_not_render_improper_template(self):
-    #     """Test GET request renders NOT the incorrect template."""
+    def test_about_view_not_render_improper_template(self):
+        """Test GET request renders NOT the incorrect template."""
 
-    #     response = self.client.get('/')
+        response = self.client.get('/about/')
 
-    #     self.assertTemplateNotUsed(response, 'reviews/startbootstrap-creative-gh-pages/home.html')
+        self.assertTemplateNotUsed(response, 'reviews/startbootstrap-full-width-pics-gh-pages/home.html')
 
     # def test_home_view_response_contains_homepage_elements(self):
     #     """Function that tests the page rendered contains the elements that the
