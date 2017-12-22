@@ -1,0 +1,7 @@
+boto==2.48.0
+Django==1.11
+django-cors-headers==2.1.0
+django-storages==1.6.5
+postgres==2.2.1
+psycopg2==2.7.3.2
+pytz==2017.3
