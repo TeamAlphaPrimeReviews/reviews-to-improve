@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+# [ReviewsImprove](https://github.com/TeamAlphaPrimeReviews)
+Building better online reviews to empower users
+=======
 # [![Build Status](https://travis-ci.org/TeamAlphaPrimeReviews/reviews-to-improve.svg?branch=master)](https://travis-ci.org/TeamAlphaPrimeReviews/reviews-to-improve)[ReviewImprove](http://ec2-54-146-255-108.compute-1.amazonaws.com)
 Analyzing better online reviews to empower users
+>>>>>>> eeab095ab741e7ccd9eae2334379404e84b10e13
 
 
 **Authors:**
@@ -12,11 +17,33 @@ We analyze online reviews to empower users. Online reviews are helpful except wh
 
 ## App Navigation
 
+<<<<<<< HEAD
+Point your browser at: (http://ec2-54-146-255-108.compute-1.amazonaws.com).
+=======
 Point your browser at the site: [ReviewImprove](http://ec2-54-146-255-108.compute-1.amazonaws.com).
+>>>>>>> eeab095ab741e7ccd9eae2334379404e84b10e13
 
 
 ## Resources Used
 
+<<<<<<< HEAD
+
+
+## Testing
+
+To install pytest:
+```
+pip install pytest
+```
+To read more: [Pytest](https://docs.pytest.org/en/latest/)
+
+To install pytest coverage:
+```
+pip install pytest-cov
+```
+To read more: [Pytest-cov](https://pypi.python.org/pypi/pytest-cov)
+
+=======
 #### AWS specific services:
 [Hosting on AWS EC2](https://aws.amazon.com/ec2/?hp=tile&so-exp=below)
 [Amazon Webservice - S3](https://aws.amazon.com/s3/?hp=tile&so-exp=below)
@@ -46,6 +73,7 @@ Scraped the web with:
 Analyzed the data with:
 Used the natural language toolkit - [Nltk](http://www.nltk.org/data.html)
 And also the scikit for handling our classification models - [scikit-learn](http://scikit-learn.org/stable/)
+>>>>>>> eeab095ab741e7ccd9eae2334379404e84b10e13
 
 ## Future goals
 
@@ -54,6 +82,8 @@ To add more categories beyond movies is a goal of ReviewImprove. We aim to be a 
 ## Contributing
 
 If you want to contribute, fork the repo: (https://github.com/TeamAlphaPrimeReviews/reviews-to-improve).
+<<<<<<< HEAD
+=======
 
 ## Testing
 
@@ -83,3 +113,4 @@ You can deactivate your environment at any time by simply typing in your command
 ```
 deactivate
 ```
+>>>>>>> eeab095ab741e7ccd9eae2334379404e84b10e13
