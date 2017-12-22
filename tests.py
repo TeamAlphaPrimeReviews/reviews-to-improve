@@ -100,7 +100,7 @@ class TestAboutView(TestCase):
         self.client = Client()
 
     def test_about_view_contains_amazon_aws_s3(self):
-        response = self.client.get('').content
+        response = self.client.get('/about/').content
         el = '<script src="https://reviews-to-improve-s3.s3.amazonaws.com/static/reviews/js/creative.min.js"></script>'
         self.assertIn(el, str(response))
 
