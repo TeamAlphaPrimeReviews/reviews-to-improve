@@ -5,12 +5,8 @@ notifications:
   email: false
 
 install:
-  - pip install pytest pytest-cov
   - pip install coveralls
-  - pip install -U nltk
-  - pip install pandas
-  - pip install django
-  - pip install beautifulsoup4
+  - pip install -r requirements.pip
 
 env:
   - SECRET_KEY='potato' DATABASE_NAME='reviews' DATABASE_USER='postgres' DATABASE_HOST='127.0.0.1' DATABASE_PASSWORD=''
