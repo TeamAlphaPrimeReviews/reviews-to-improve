@@ -153,14 +153,14 @@ class TestAboutView(TestCase):
         correct_el = b'<link href="https://reviews-to-improve-s3.s3.amazonaws.com/static/reviews/vendor-about/bootstrap/css/bootstrap.min.css" rel="stylesheet">'
         self.assertIn(correct_el, response.content)
 
-    # def test_home_view_static_files_do_not_contain_load_static(self):
-    #     """Function that tests the home view being rendered is also rendering
-    #     the correct static files."""
+    def test_about_view_static_files_do_not_contain_load_static(self):
+        """Function that tests the home view being rendered is also rendering
+        the correct static files."""
 
-    #     response = self.client.get('/')
+        response = self.client.get('/about/')
 
-    #     incorrect_el = '<link href="{% static "reviews/vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">'
-    #     self.assertNotIn(incorrect_el, str(response.content))
+        incorrect_el = '<link href="{% static "reviews/vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">'
+        self.assertNotIn(incorrect_el, str(response.content))
 
     # def test_home_view_contains_word_about(self):
     #     """Test home view has a tag with about text to make sure still About link."""
