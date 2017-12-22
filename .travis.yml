@@ -12,6 +12,9 @@ install:
   - pip install django
   - pip install beautifulsoup4
 
+env:
+  - SECRET_KEY='potato' DATABASE_NAME='reviews' DATABASE_USER='postgres' DATABASE_HOST='127.0.0.1' DATABASE_PASSWORD=''
+
 script:
   - python reviews_to_improve/manage.py test
 
