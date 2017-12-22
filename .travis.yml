@@ -10,6 +10,7 @@ install:
   - pip install -U nltk
   - pip install pandas
   - pip install django
+  - pip install beautifulsoup4
 
 script:
   - py.test
