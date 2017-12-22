@@ -8,7 +8,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Creative - Start Bootstrap Theme</title>
+    <title>Review Improve</title>
+    {% load static %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static "reviews/img/favicon.ico" %}">
 
     <!-- Bootstrap core CSS -->
     {% load static %}
@@ -35,23 +37,17 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Review Improve</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link js-scroll-trigger" href="{% url 'about' %}">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="{% url 'demo' %}">Services</a>
             </li>
           </ul>
         </div>
@@ -63,13 +59,13 @@
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <h1 class="text-uppercase">
-              <strong>Your Favorite Source of Free Bootstrap Themes</strong>
+              <strong>Review Improve</strong>
             </h1>
             <hr>
           </div>
           <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+            <p id="text-faded-index" class="text-faded mb-5">A site dedicated to ensuring quality reviews across all web-services and platforms. Check out our demo page to learn more!</p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="{% url 'demo' %}">Find Out More</a>
           </div>
         </div>
       </div>
@@ -81,8 +77,7 @@
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="section-heading text-white">We've got what you need!</h2>
             <hr class="light my-4">
-            <p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+            <p class="text-faded mb-4">Review Improve has the software you need to get your website packed full of quality reviews! Fully tested proprietary software guarauntees our technology is secure, efficient, and easy to use. See for yourself!</p>
           </div>
         </div>
       </div>
@@ -101,30 +96,30 @@
         <div class="row">
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Sturdy Templates</h3>
-              <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+              <i class="fa fa-4x fa-bolt text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Quick Scans</h3>
+              <p class="text-muted mb-0">State-of-the-art Machine Learning ensures fast and efficient review-scans.</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Ready to Ship</h3>
-              <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+              <h3 class="mb-3">Accurate Analysis</h3>
+              <p class="text-muted mb-0">Our algorithm weights several important factors when checking reviews.</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Up to Date</h3>
-              <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
+              <h3 class="mb-3">Increase User Experience</h3>
+              <p class="text-muted mb-0">Removal of inflated reviews from your site creates a better online experience for the user.</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Made with Love</h3>
-              <p class="text-muted mb-0">You have to make your websites with love these days!</p>
+              <h3 class="mb-3">24/7 Support</h3>
+              <p class="text-muted mb-0">Experienced representatives stand by to make sure you have the tools you need.</p>
             </div>
           </div>
         </div>
@@ -136,16 +131,13 @@
         <div class="row no-gutters popup-gallery">
           <div class="col-lg-4 col-sm-6">
             {% load static %}
-            <a class="portfolio-box" href="{% static "reviews/img/portfolio/fullsize/1.jpg" %}">
+            <a class="portfolio-box" href="{% static "reviews/img/portfolio/fullsize/online.jpg" %}">
               {% load static %}
-              <img class="img-fluid" src="{% static "reviews/img/portfolio/thumbnails/1.jpg" %}" alt="">
+              <img class="img-fluid" src="{% static "reviews/img/portfolio/thumbnails/online.jpg" %}" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
                   <div class="project-name">
-                    Project Name
+                    Web Products
                   </div>
                 </div>
               </div>
@@ -153,16 +145,13 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             {% load static %}
-            <a class="portfolio-box" href="{% static "reviews/img/portfolio/fullsize/2.jpg" %}">
+            <a class="portfolio-box" href="{% static "reviews/img/portfolio/fullsize/theater.jpg" %}">
               {% load static %}
-              <img class="img-fluid" src="{% static "reviews/img/portfolio/thumbnails/2.jpg" %}" alt="">
+              <img class="img-fluid" src="{% static "reviews/img/portfolio/thumbnails/theater.jpg" %}" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
                   <div class="project-name">
-                    Project Name
+                    Movies and Film
                   </div>
                 </div>
               </div>
@@ -170,101 +159,39 @@
           </div>
           <div class="col-lg-4 col-sm-6">
             {% load static %}
-            <a class="portfolio-box" href="{% static "reviews/img/portfolio/fullsize/3.jpg" %}">
+            <a class="portfolio-box" href="{% static "reviews/img/portfolio/fullsize/books.jpg" %}">
               {% load static %}
-              <img class="img-fluid" src="{% static "reviews/img/portfolio/thumbnails/3.jpg" %}" alt="">
+              <img class="img-fluid" src="{% static "reviews/img/portfolio/thumbnails/books.jpg" %}" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
                   <div class="project-name">
-                    Project Name
+                    Books
                   </div>
                 </div>
               </div>
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6">
-            {% load static %}
-            <a class="portfolio-box" href="{% static "reviews/img/portfolio/fullsize/4.jpg" %}">
-              {% load static %}
-              <img class="img-fluid" src="{% static "reviews/img/portfolio/thumbnails/4.jpg" %}" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            {% load static %}
-            <a class="portfolio-box" href="{% static "reviews/img/portfolio/fullsize/5.jpg" %}">
-              {% load static %}
-              <img class="img-fluid" src="{% static "reviews/img/portfolio/thumbnails/5.jpg" %}" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            {% load static %}
-            <a class="portfolio-box" href="{% static "reviews/img/portfolio/fullsize/6.jpg" %}">
-              {% load static %}
-              <img class="img-fluid" src="{% static "reviews/img/portfolio/thumbnails/6.jpg" %}" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
+
     </section>
 
     <section class="bg-dark text-white">
       <div class="container text-center">
-        <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-        <a class="btn btn-light btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download Now!</a>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="section-heading">Let's Get In Touch!</h2>
             <hr class="my-4">
-            <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+            <p class="mb-5">Have questions? Good, because we have answers. Give us a call or send us an email and we will get back to you as soon as possible!</p>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-4 ml-auto text-center">
             <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-            <p>123-456-6789</p>
+            <p>206-260-0620</p>
           </div>
           <div class="col-lg-4 mr-auto text-center">
             <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
             <p>
-              <a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a>
+              <a href="mailto:review_improve@gmail.com">review_improve@gmail.com</a>
             </p>
           </div>
         </div>

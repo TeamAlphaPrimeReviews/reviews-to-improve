@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Review Improve - About Us</title>
+
+    {% load static %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static "reviews/img/favicon.ico" %}">
+
+    <!-- Bootstrap core CSS -->
+    {% load static %}
+    <link href="{% static "reviews/vendor-about/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    {% load static %}
+    <link href="{% static "reviews/css-about/full-width-pics.css" %}" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#page-top">Review Improve</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'home' %}">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'demo' %}">Services</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header - set the background image for the header in the line below -->
+    <header class="py-5 bg-image-full" style="background-image: url('{% static "reviews/img/marco-header.jpg" %}');">
+      <img class="img-fluid d-block mx-auto" src="{% static "reviews/img/marco-profile.png" %}" alt="">
+    </header>
+
+    <!-- Content section -->
+    <section class="py-5">
+      <div class="container">
+        <h1>Marco Zangari</h1>
+        <p class="lead">Python developer inspired to make more intuitive, fluid, and semantic code through clean architecture.</p>
+        <p>Python developer inspired to make more intuitive, fluid, and semantic code through clean architecture.</p>
+      </div>
+    </section>
+
+    <!-- Image Section - set the background image for the header in the line below -->
+    <section class="py-5 bg-image-full" style="background-image: url('{% static "reviews/img/brendan-header.jpg" %}');">
+      <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
+      <img class="img-fluid d-block mx-auto" src="{% static "reviews/img/lame.jpg" %}" alt="">
+      <div style="height: 200px;"></div>
+    </section>
+
+    <!-- Content section -->
+    <section class="py-5">
+      <div class="container">
+        <h1>Brendan Davis</h1>
+        <p class="lead">Writer, poet, and bad review enthusiast.</p>
+        <p>He once fought a man for wearing a fedora.</p>
+      </div>
+    </section>
+
+    {% load static %}
+    <header class="py-5 bg-image-full" style="background-image: url('{% static "reviews/img/carson-header.jpg" %}');">
+      <img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt="">
+    </header>
+
+    <!-- Content section -->
+    <section class="py-5">
+      <div class="container">
+        <h1>Carson Newton</h1>
+        <p class="lead">Full-Stack Developer and Pythonista.</p>
+        <p>Programming is something I fell in love. It is a vast universe where concepts are brought to life through fun and complex models of the real-world. One day I hope to do it for a living.</p>
+      </div>
+    </section>
+
+    <!-- Image Section - set the background image for the header in the line below -->
+    <section class="py-5 bg-image-full" style="background-image: url('{% static "reviews/img/allan-header.jpg" %}');">
+      <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
+      <img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt="">
+      <div style="height: 200px;"></div>
+    </section>
+
+    <!-- Content section -->
+    <section class="py-5">
+      <div class="container">
+        <h1>Allan Liebold</h1>
+        <p class="lead">Boxer, wrestler, and all-time pro.</p>
+        <p>He used to be here. Now he's not. Deal with it.</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Review Improve LLC &copy; www.reviewimprove.com 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    {% load static %}
+    <script src="{% static "reviews/vendor-about/jquery/jquery.min.js" %}"></script>
+    {% load static %}
+    <script src="{% static "reviews/vendor-about/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+
+
+  </body>
+
+</html>

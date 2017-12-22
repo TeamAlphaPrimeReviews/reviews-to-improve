@@ -1,0 +1,18 @@
+language: python
+python:
+  - "3.6"
+notifications:
+  email: false
+
+install:
+  - pip install coveralls
+  - pip install -r requirements.pip
+
+env:
+  - SECRET_KEY='potato' DATABASE_NAME='reviews' DATABASE_USER='postgres' DATABASE_HOST='127.0.0.1' DATABASE_PASSWORD=''
+
+script:
+  - python reviews_to_improve/manage.py test
+
+after_success:
+  - coveralls

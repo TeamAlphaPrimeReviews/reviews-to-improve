@@ -33,7 +33,7 @@
         clone=yes
         repo=https://github.com/TeamAlphaPrimeReviews/reviews-to-improve.git
         dest=/home/ubuntu/reviews_to_improve/
-        version=features-s3
+        version=test-cors
     - name: Create venv
       command: python3 -m venv /home/ubuntu/reviews_to_improve/ENV
     - name: Install gunicorn to VENV
@@ -65,6 +65,10 @@
     - pip:
         virtualenv: /home/ubuntu/reviews_to_improve/ENV
         requirements: /home/ubuntu/reviews_to_improve/requirements.pip
+    - django_manage:
+        virtualenv: /home/ubuntu/reviews_to_improve/ENV
+        command: collectstatic
+        app_path: /home/ubuntu/reviews_to_improve/reviews_to_improve/
     - name: Start ReviewsToImprove app
       service:
         name=gunicorn
