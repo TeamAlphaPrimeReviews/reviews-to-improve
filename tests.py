@@ -1,3 +1,6 @@
+"""Tests for django application called review improve."""
+
+
 from django.test import TestCase
 from django.test import Client
 
