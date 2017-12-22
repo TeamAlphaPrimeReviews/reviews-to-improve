@@ -33,7 +33,7 @@
         clone=yes
         repo=https://github.com/TeamAlphaPrimeReviews/reviews-to-improve.git
         dest=/home/ubuntu/reviews_to_improve/
-        version=features-demo-stats
+        version=test-cors
     - name: Create venv
       command: python3 -m venv /home/ubuntu/reviews_to_improve/ENV
     - name: Install gunicorn to VENV
