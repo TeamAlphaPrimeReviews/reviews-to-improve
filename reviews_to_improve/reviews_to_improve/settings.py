@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_test_tools.apps.DjangoTestToolsConfig'
+    # 'django_test_tools.apps.DjangoTestToolsConfig'
     'reviews',
     'storages'
 ]
