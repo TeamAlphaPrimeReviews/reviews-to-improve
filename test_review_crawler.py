@@ -3,7 +3,7 @@
 import pdb
 import pytest
 from django.test import Client
-from reviews_to_improve.review_crawler import review_maker
+from review_crawler import review_maker
 
 # from .reviews_to_improve.review_crawler import review_maker
 
