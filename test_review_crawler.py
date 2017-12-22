@@ -29,11 +29,4 @@ def test_review_maker_lst_has_string_value():
     """Test that the lst of the review set contains a tuple that has a string
     value."""
     review_lst = list(reviews)
-    assert isinstance(str(review_lst[0][0])d, str)
-
-
-# def test_review_maker_all_reviews():
-#     """Test allreviews returns html."""
-#     c = Client()
-#     pdb.set_trace()
-#     res = c.get('https://www.goodreads.com/book/show/28259132-chaos-monkeys#other_reviews')
+    assert isinstance(str(review_lst[0][0]), str)

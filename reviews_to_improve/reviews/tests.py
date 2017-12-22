@@ -88,13 +88,6 @@ class TestHomeView(TestCase):
         el = '<script src="https://reviews-to-improve-s3.s3.amazonaws.com/static/reviews/js/creative.min.js"></script>'
         self.assertIn(el, str(response))
 
-<<<<<<< HEAD
-    def test_about_view_contains_amazon_aws_s3(self):
-        response = self.client.get('').content
-        el = '<script src="https://reviews-to-improve-s3.s3.amazonaws.com/static/reviews/js/creative.min.js"></script>'
-        self.assertIn(el, str(response))
-
-=======
 
 class TestAboutView(TestCase):
     """Class containing about_view tests."""
@@ -149,27 +142,3 @@ class TestAboutView(TestCase):
 
         correct_el = '<link href="https://reviews-to-improve-s3.s3.amazonaws.com/static/reviews/vendor-about/bootstrap/css/bootstrap.min.css" rel="stylesheet">'
         self.assertIn(correct_el, str(response.content))
-
-    # def test_home_view_static_files_do_not_contain_load_static(self):
-    #     """Function that tests the home view being rendered is also rendering
-    #     the correct static files."""
-
-    #     response = self.client.get('/')
-
-    #     incorrect_el = '<link href="{% static "reviews/vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">'
-    #     self.assertNotIn(incorrect_el, str(response.content))
-
-    # def test_home_view_contains_word_about(self):
-    #     """Test home view has a tag with about text to make sure still About link."""
-
-    #     response = self.client.get('/').content
-    #     el = 'About'
-    #     self.assertInHTML(el, str(response))
-
-    # def test_home_view_contains_amazon_aws_s3(self):
-    #     """Test home_view contains the string amazon_aws_s3."""
-
-    #     response = self.client.get('/').content
-    #     el = '<script src="https://reviews-to-improve-s3.s3.amazonaws.com/static/reviews/js/creative.min.js"></script>'
-    #     self.assertIn(el, str(response))
->>>>>>> 44458d644e243d5f2de735444e3a41fffb2a9ff3
