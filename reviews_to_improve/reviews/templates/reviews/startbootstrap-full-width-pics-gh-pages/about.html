@@ -10,6 +10,9 @@
 
     <title>Review Improve - About Us</title>
 
+    {% load static %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static "reviews/img/favicon.ico" %}">
+
     <!-- Bootstrap core CSS -->
     {% load static %}
     <link href="{% static "reviews/vendor-about/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
@@ -45,23 +48,23 @@
     </nav>
 
     <!-- Header - set the background image for the header in the line below -->
-    <header class="py-5 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=1076');">
-      <img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt="">
+    <header class="py-5 bg-image-full" style="background-image: url('{% static "reviews/img/marco-header.jpg" %}');">
+      <img class="img-fluid d-block mx-auto" src="{% static "reviews/img/marco-profile.png" %}" alt="">
     </header>
 
     <!-- Content section -->
     <section class="py-5">
       <div class="container">
         <h1>Marco Zangari</h1>
-        <p class="lead">Lover, fighter, web-crawler extraordinaire.</p>
-        <p>He does lots of things with stuff and junk.</p>
+        <p class="lead">Python developer inspired to make more intuitive, fluid, and semantic code through clean architecture.</p>
+        <p>Python developer inspired to make more intuitive, fluid, and semantic code through clean architecture.</p>
       </div>
     </section>
 
     <!-- Image Section - set the background image for the header in the line below -->
-    <section class="py-5 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=1081');">
+    <section class="py-5 bg-image-full" style="background-image: url('{% static "reviews/img/brendan-header.jpg" %}');">
       <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
-      <img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt="">
+      <img class="img-fluid d-block mx-auto" src="{% static "reviews/img/lame.jpg" %}" alt="">
       <div style="height: 200px;"></div>
     </section>
 
@@ -83,13 +86,13 @@
     <section class="py-5">
       <div class="container">
         <h1>Carson Newton</h1>
-        <p class="lead">Maker of things, tinkerer of bootstrap, and man in charge of the text on this page.</p>
-        <p>Fun times.</p>
+        <p class="lead">Full-Stack Developer and Pythonista.</p>
+        <p>Programming is something I fell in love. It is a vast universe where concepts are brought to life through fun and complex models of the real-world. One day I hope to do it for a living.</p>
       </div>
     </section>
 
     <!-- Image Section - set the background image for the header in the line below -->
-    <section class="py-5 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=1081');">
+    <section class="py-5 bg-image-full" style="background-image: url('{% static "reviews/img/allan-header.jpg" %}');">
       <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
       <img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt="">
       <div style="height: 200px;"></div>

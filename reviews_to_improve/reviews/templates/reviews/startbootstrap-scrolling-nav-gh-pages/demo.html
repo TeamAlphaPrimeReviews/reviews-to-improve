@@ -10,6 +10,9 @@
 
     <title>Review Improve - Services | Demo</title>
 
+    {% load static %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static "reviews/img/favicon.ico" %}">
+
     <!-- Bootstrap core CSS -->
     {% load static %}
     <link href="{% static "reviews/vendor-demo/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
@@ -86,7 +89,14 @@
                 <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 68%"></div>
             </div>
             <div class="alert alert-success" role="alert" id="green-alert">
-                Review scan complete. The site <a href="https://www.rottentomatoes.com/m/star_wars_the_last_jedi/reviews/?type=user" class="alert-link">Rotten Tomatoes - Last Jedi</a> has been tested.
+                Review scan complete. The site <a href="https://www.rottentomatoes.com/m/star_wars_the_last_jedi/reviews/?type=user" class="alert-link">Rotten Tomatoes Reviews - The Last Jedi</a> has been tested!
+            </div>
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1>Total Reviews Analyzed - 680</h1>
+                  <h1 class="text-success">Contributive Reviews - 39.6%</h1>
+                  <h1 class="text-danger">Non-Contributive Reviews - 60.4%</h1>
+                </div>
             </div>
           </div>
         </div>
