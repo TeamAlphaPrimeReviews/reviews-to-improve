@@ -103,7 +103,7 @@ class TestAboutView(TestCase):
         """Test the about view contains amazon aws 3."""
 
         response = self.client.get('/about/').content
-        el = '<script src="https://reviews-to-improve-s3.s3.amazonaws.com/static/reviews/js/creative.min.js"></script>'
+        el = '<link href="https://.s3.amazonaws.com/static/reviews/vendor-about/bootstrap/css/bootstrap.min.css" rel="stylesheet">'
         self.assertIn(el, str(response))
 
     def test_about_view_response_is_200_ok(self):
