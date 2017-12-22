@@ -12,5 +12,5 @@ $('#load').click(function() {
   $('.progress').delay(1000).fadeIn().delay(8000).fadeOut();
   $('#green-alert').delay(10000).fadeIn();
   $('.jumbotron').delay(10700).fadeIn();
-  $('#blue-alert').delay(11400).fadeIn();
+  $('#blue-alert-results').delay(11000).fadeIn();
 });
