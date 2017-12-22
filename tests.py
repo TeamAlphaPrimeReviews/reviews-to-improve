@@ -150,7 +150,7 @@ class TestAboutView(TestCase):
 
         response = self.client.get('/about/')
 
-        correct_el = b'<link href="https://reviews-to-improve-s3.s3.amazonaws.com/static/reviews/vendor-about/bootstrap/css/bootstrap.min.css" rel="stylesheet">'
+        correct_el = b'<link href="https://.s3.amazonaws.com/static/reviews/vendor-about/bootstrap/css/bootstrap.min.css" rel="stylesheet">'
         self.assertIn(correct_el, response.content)
 
     # def test_home_view_static_files_do_not_contain_load_static(self):
